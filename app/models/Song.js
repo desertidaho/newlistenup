@@ -15,7 +15,7 @@ export default class Song {
         return `
         <div class="col-md-2 my-3">
           <a onclick="app.controllers.itunesCtrl.playSong('${this.preview}')"> 
-            <div class="card">
+            <div class="card" style="border: 4px black;">
                 <img class="card-img-top img-fluid" src="${this.albumArt}" alt="">
                     <div class="card-body" style="background-color: black; color: white;">
                          <h5 class="card-title">${this.title}</h5>
