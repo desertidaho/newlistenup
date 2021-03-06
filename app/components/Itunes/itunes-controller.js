@@ -5,7 +5,8 @@ const _itunesService = new ItunesService()
 
 function drawSongs() {
   //changes button back to GET MUSIC once songs are loaded
-  document.querySelector('#get-music-button').textContent = 'SEARCH MUSIC'
+  document.querySelector('#get-music-button').style = 'text-transform: unset !important;'
+  document.querySelector('#get-music-button').textContent = 'Search Music'
   //card templates
   let songs = _itunesService.Songs
   let template = ''
@@ -28,7 +29,7 @@ export default class ItunesController {
     let artist = e.target.artist.value;
     let form = e.target
     //changes the button to loading while songs load
-    document.querySelector('#get-music-button').textContent = 'LOADING...'
+    document.querySelector('#get-music-button').textContent = 'Loading...'
     _itunesService.getMusicByArtist(artist)
     form.reset()
     document.querySelector('.my-audio').style.visibility = 'visible'

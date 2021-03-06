@@ -28,24 +28,27 @@
 <body id="page-top">
 
   <nav class="navbar fixed-top navbar-transparent justify-content-center mt-2" style="visibility: hidden;">
-    <div class="row" id="nav-search">
-      <audio controls autoplay class="my-audio song-audio" id="playAudio" src="" type="audio/ogg"></audio>
+    <div class="row mx-auto" id="nav-search">
+      <audio controls autoplay class="my-audio song-audio mb-2" id="playAudio" src="" type="audio/ogg"></audio>
       <a style="cursor: pointer;"><img src="img/search.png" alt="search icon" class="ml-4" id="magnifyingglass" style="width: 2rem; height: 2rem;" onclick="app.controllers.itunesCtrl.home();"></a>
+      <div class="row now-playing-btn mx-auto">
+        <!--insert now playing details-->
+      </div>
     </div>
   </nav>
 
-  <header class="masthead">
+  <header class="masthead h-100">
     <div class="container h-100">
       <div class="row h-100" id="main">
         <div class="col-sm-12 my-auto">
-          <div class="header-content mx-auto">
+          <div class="header-content text-center mx-auto">
             <h1 class="title" style="text-shadow: 2px 2px black;">Listen Up<i class="fas fa-arrow-circle-up ml-3"></i></h1>
             <h3 class="subtitle" style="text-shadow: 2px 2px black;">A free music previewer for all your favorite artists, albumns, and songs</h3>
             <div class="mb-5" id="form-search">
               <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
                 <div class="form-group header-content mx-auto">
                   <input type="text" class="form-control song-input mr-3 mb-3" name="artist" placeholder="Artist, Album, Song..." id="song-input" />
-                  <button type="submit" class="btn btn-lg btn-light mb-3" id="get-music-button">Search Music</button>
+                  <button type="submit" class="btn btn-outline-light mb-3" id="get-music-button"></button>
                 </div>
               </form>
             </div>
@@ -54,6 +57,8 @@
       </div>
     </div>
   </header>
+
+  
 
   <!-- search results -->
   <div class="container-fluid pt-5" style="background-color: black; display: none;" id="songdiv">
