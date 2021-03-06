@@ -28,16 +28,20 @@
 <body id="page-top">
 
   <nav class="navbar fixed-top navbar-transparent justify-content-center mt-2" style="visibility: hidden;">
-    <audio controls autoplay class="my-audio song-audio" id="playAudio" src="" type="audio/ogg"></audio>
+    <div class="row" id="nav-search">
+      <audio controls autoplay class="my-audio song-audio" id="playAudio" src="" type="audio/ogg"></audio>
+      <a style="cursor: pointer;"><img src="img/search.png" alt="search icon" class="ml-4 mt-3" style="width: 2rem; height: 2rem;" onclick="app.controllers.itunesCtrl.home();"></a>
+    </div>
+    
   </nav>
 
   <header class="masthead">
-    <div class="container-fluid h-100">
+    <div class="container h-100">
       <div class="row h-100" id="main">
         <div class="col-sm-12 my-auto">
           <div class="header-content mx-auto">
-            <h1 class="home-intro">Listen Up<img src="/favicon-32x32.png" class="ml-3" alt="Up arrow"></h1>
-            <h2 class="home-intro">A free music previewer for all your favorite artists, albumns, and songs</h2>
+            <h1 class="title">Listen Up<i class="fas fa-arrow-circle-up ml-3"></i></h1>
+            <h2 class="subtitle">A free music previewer for all your favorite artists, albumns, and songs</h2>
             <div class="mb-5" id="form-search">
               <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
                 <div class="form-group header-content mx-auto">
@@ -53,8 +57,8 @@
   </header>
 
   <!-- search results -->
-  <div class="container-fluid" style="background-color: black;">
-    <div class="row" id="songs">
+  <div class="container-fluid pt-5" style="background-color: black; display: none;" id="songdiv">
+    <div class="row pt-5" id="songs">
       <!-- insert music results from song.js template -->
     </div>
   </div>

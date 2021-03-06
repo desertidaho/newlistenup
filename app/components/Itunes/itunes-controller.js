@@ -32,8 +32,9 @@ export default class ItunesController {
     _itunesService.getMusicByArtist(artist)
     form.reset()
     document.querySelector('.my-audio').style.visibility = 'visible'
-    document.querySelector('.masthead').style.height = '80vh'
-    document.querySelector('.masthead').style.background = 'black'
+    document.querySelector('#nav-search').style.visibility = 'visible'
+    document.querySelector('.masthead').style.display = 'none'
+    document.querySelector('#songdiv').style.display = 'block'
   }
 
   playSong(url) {
