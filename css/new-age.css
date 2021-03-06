@@ -153,11 +153,10 @@ section h2 {
 header.masthead {
   position: relative;
   width: 100%;
-  padding-top: 150px;
-  padding-bottom: 100px;
+  
   color: white;
-  background: url("../img/music2.jpg"), #7b4397;
-  background: url("../img/music2.jpg"), linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/music.jpeg"), #7b4397;
+  background: url("../img/music.jpeg"), linear-gradient(to left, #7b4397, #dc2430);
   background-size: cover;
 }
 
