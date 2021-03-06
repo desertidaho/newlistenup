@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>Listen Up</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,41 +27,24 @@
 
 <body id="page-top">
 
+  <nav class="navbar fixed-top navbar-transparent justify-content-center mt-2" style="visibility: hidden;">
+    <audio controls autoplay class="my-audio song-audio" id="playAudio" src="" type="audio/ogg"></audio>
+  </nav>
+
   <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100">
-        <!-- left column -->
-        <div class="col-lg-7 my-auto">
+    <div class="container-fluid h-100">
+      <div class="row h-100" id="main">
+        <div class="col-sm-12 my-auto">
           <div class="header-content mx-auto">
-            <h1>Listen Up</h1>
-            <h2 class="">A free music previewer for all your favorite artists, albumns, and songs</h2>
+            <h1 class="home-intro">Listen Up<img src="/favicon-32x32.png" class="ml-3" alt="Up arrow"></h1>
+            <h2 class="home-intro">A free music previewer for all your favorite artists, albumns, and songs</h2>
             <div class="mb-5" id="form-search">
               <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-                  <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-                  <div class="form-group">
-                      <input type="text" class="form-control song-input" name="artist" placeholder="Artist, Album, Song..."
-                          id="song-input" />
-                      <button type="submit" class="btn btn-lg btn-outline-light ml-2 song-btn"
-                          id="get-music-button">Search
-                          Music</button>
-                  </div>
+                <div class="form-group header-content mx-auto">
+                  <input type="text" class="form-control song-input mr-3 mb-3" name="artist" placeholder="Artist, Album, Song..." id="song-input" />
+                  <button type="submit" class="btn btn-lg btn-light mb-3" id="get-music-button">Search Music</button>
+                </div>
               </form>
-          </div>
-        </div>
-        <!-- right column -->
-        </div>
-        <div class="col-lg-5 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/music.jpg" class="img-fluid h-100" alt="">
-                </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -68,15 +52,23 @@
     </div>
   </header>
 
+  <!-- search results -->
+  <div class="container-fluid" style="background-color: black;">
+    <div class="row" id="songs">
+      <!-- insert music results from song.js template -->
+    </div>
+  </div>
+  
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
   <!-- Custom scripts for this template -->
   <script src="js/new-age.min.js"></script>
+  <script type="module" src="app/main.js"></script>
+  
 
 </body>
 
