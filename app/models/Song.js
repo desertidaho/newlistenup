@@ -18,7 +18,8 @@ export default class Song {
             <div class="card" style="border: 4px black;">
                 <img class="card-img-top img-fluid" src="${this.albumArt}" alt="">
                     <div class="card-body" style="background-color: black; color: white;">
-                         <h5 class="card-title">${this.title}</h5>
+                         <p class="card-title">${this.title}</p>
+                         <p class="card-text">${this.collection}</p>
                          <p class="card-text">${this.artist}</p>
                     </div> 
             </div>
