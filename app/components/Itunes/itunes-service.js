@@ -39,7 +39,7 @@ export default class ItunesService {
   showDetails(url) {
     for (let i = 0; i < _state.songs.length; i++) {
       if (_state.songs[i].preview == [url]) {
-        document.querySelector('.now-playing-btn').innerHTML = `<a href="${_state.songs[i].track}"  target="_blank"><button class="btn btn-sm btn-light shadow mx-3 my-2 itunes">${_state.songs[i].title} $${_state.songs[i].iprice}</button><button class="btn btn-sm btn-light shadow mx-3 my-2" id="download-album">${_state.songs[i].collection} $${_state.songs[i].price}</button></a><a href="https://commerce.coinbase.com/checkout/156b526b-af9b-4f6c-adc0-74ce1424c84f"><button target="_blank" class="mx-3 my-2 btn btn-sm btn-warning shadow itunes">Donate Bitcoin<i class="ml-2 py-0 fab fa-bitcoin"></i></button></a>`
+        document.querySelector('.now-playing-btn').innerHTML = `<a href="${_state.songs[i].track}"  target="_blank"><button class="btn btn-sm btn-light shadow mx-3 my-2 itunes">${_state.songs[i].title} $${_state.songs[i].iprice}</button><button class="btn btn-sm btn-light shadow mx-3 my-2" id="download-album">${_state.songs[i].collection} $${_state.songs[i].price}</button></a><a href="https://commerce.coinbase.com/checkout/156b526b-af9b-4f6c-adc0-74ce1424c84f"><button target="_blank" class="mx-3 my-2 btn btn-sm btn-warning shadow itunes">Tip Bitcoin<i class="ml-2 py-0 fab fa-bitcoin"></i></button></a>`
       }
     }
   }
